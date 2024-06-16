@@ -1,0 +1,52 @@
+:host {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  .futures-price-store {
+    display: flex;
+    flex-direction: column;
+    min-width: 25%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    .min-max-wrapper {
+      display: flex;
+      align-items: center;
+      & > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+    }
+    .price-interval {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+      .interval {
+        font-weight: bold;
+        flex: 1;
+        margin-right: 10px;
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+        height: 20px;
+        padding: 5px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+    }
+  }
+  canvas {
+    max-width: 70%;
+  }
+}

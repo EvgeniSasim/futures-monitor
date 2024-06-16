@@ -1,0 +1,20 @@
+<div class="futures-price-store">
+    <h1>Цена фьючерса</h1>
+    <p>Обновление данных каждые 5 секунд</p>
+<div class="min-max-wrapper">
+    <div class="empty"></div>
+    <div class="min">Min</div>
+    <div class="max">Max</div>
+</div>
+    <div class="price-interval" *ngFor="let interval of ['5m', '15m', '1h', '4h', '24h']">
+        <div class="interval">{{ interval }}</div>
+        <div class="price">{{ prices[interval].min }}</div>
+        <div class="price">{{ prices[interval].max }}</div>
+    </div>
+</div>
+<canvas
+        baseChart
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [type]="lineChartType"
+></canvas>
